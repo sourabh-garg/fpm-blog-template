@@ -1,0 +1,501 @@
+-- $main: #fff
+-- $primary: #F79489
+-- $primary-500: #F8AFA6
+-- $primary-300: #FADCD9
+-- $primary-100: #F9F1F0
+-- $accent: #0D1F2D
+-- $error: c
+-- $informational: c
+-- $warning: c
+-- $success: c
+-- $secondary-100: c
+-- $secondary-300: c
+-- $secondary-400: c
+-- $secondary-500: c
+-- $secondary-700: c
+-- $secondary-700: #4C555A
+-- $secondary-900: #384248
+-- $separator: #eee
+
+-- record toc:
+caption title:
+string link:
+
+
+-- component header-link:
+component: ftd.text
+toc $toc:
+size: 14
+color: black
+text: $toc.title
+link:  $toc.link
+min-width: fit-content
+
+
+-- component header:
+component: ftd.row
+string $title:
+integer $padding-horizontal:
+integer $padding-vertical:
+optional string $link: \
+toc list $toc:
+width: fill
+background-color: white
+border-color: #eaecee
+border-bottom: 1
+
+
+--- ftd.row:
+width: fill
+padding-horizontal: $padding-horizontal
+padding-vertical: $padding-vertical
+
+--- ftd.text: $title
+size: 22
+color: black
+link: $link
+padding-right: 50
+
+--- ftd.row:
+align: left
+spacing: 30
+
+--- header-link:
+$loop$: $toc as $obj
+toc: $obj
+
+
+-- component links-list:
+component: ftd.row
+toc list $toc:
+integer $padding-horizontal:
+integer $padding-vertical:
+width: fill
+background-color: white
+overflow-x: hidden
+padding-horizontal: $padding-horizontal
+
+--- ftd.row:
+width: fill
+overflow-x: auto
+spacing: 30
+padding-vertical: $padding-vertical
+
+
+--- header-link:
+$loop$: $toc as $obj
+toc: $obj
+
+
+-- component markdown:
+component: ftd.text
+body $body:
+optional boolean $collapsed:
+optional caption $title:
+optional boolean $two_columns:
+text: $body
+size: 15
+line-height: 24
+color: $secondary-700
+padding-bottom: 8
+
+
+-- component inner-markdown:
+component: ftd.text
+body $body:
+optional boolean $collapsed:
+optional caption $title:
+optional boolean $two_columns:
+string $color: #4C555A
+text: $body
+size: 18
+line-height: 24
+color: $color
+
+
+-- component h0:
+component: ftd.column
+caption $title:
+optional body $body:
+string $color: #000c2d
+width: fill
+region: h0
+padding-bottom: 6
+
+--- ftd.text:
+text: $title
+region: title
+size: 48
+line-height: 64
+color: $color
+style: bold
+padding-bottom: 8
+padding-top: 0
+width: fill
+
+
+--- inner-markdown:
+if: $body is not null
+body: $body
+
+-- component h1:
+component: ftd.column
+caption $title:
+optional body $body:
+string $color: #000c2d
+width: fill
+region: h1
+padding-bottom: 6
+
+--- ftd.text:
+text: $title
+caption $title:
+region: title
+text: $title
+size: 36
+line-height: 40
+color: $color
+style: bold
+padding-bottom: 8
+padding-top: 16
+
+--- inner-markdown:
+if: $body is not null
+body: $body
+
+-- component h2:
+component: ftd.column
+caption $title:
+optional body $body:
+string $color: #000c2d
+width: fill
+region: h1
+padding-bottom: 6
+
+--- ftd.text:
+text: $title
+caption $title:
+region: title
+text: $title
+size: 28
+line-height: 34
+color: $color
+style: bold
+padding-bottom: 8
+padding-top: 16
+
+--- inner-markdown:
+if: $body is not null
+body: $body
+
+-- component h3:
+component: ftd.column
+caption $title:
+optional body $body:
+string $color: #000c2d
+width: fill
+region: h1
+padding-bottom: 6
+
+--- ftd.text:
+text: $title
+caption $title:
+region: title
+text: $title
+size: 22
+line-height: 30
+color: $color
+style: bold
+padding-bottom: 8
+padding-top: 16
+
+--- inner-markdown:
+if: $body is not null
+body: $body
+
+-- component h4:
+component: ftd.column
+caption $title:
+optional body $body:
+string $color: #000c2d
+width: fill
+region: h1
+padding-bottom: 6
+
+--- ftd.text:
+text: $title
+caption $title:
+region: title
+text: $title
+size: 19
+line-height: 26
+color: $color
+style: bold
+padding-bottom: 8
+padding-top: 16
+
+--- inner-markdown:
+if: $body is not null
+body: $body
+
+--- inner-markdown:
+if: $body is not null
+body: $body
+
+-- component sub-heading:
+component: ftd.column
+caption $title:
+optional body $body:
+string $color: #4C555A
+width: fill
+region: h2
+padding-bottom: 6
+
+--- ftd.text:
+text: $title
+caption $title:
+region: title
+text: $title
+size: 24
+line-height: 24
+color: $color
+style: semi-bold
+padding-bottom: 8
+padding-top: 16
+
+--- inner-markdown:
+if: $body is not null
+body: $body
+
+
+-- component subscribe-block:
+component: ftd.column
+width: fill
+caption $title:
+optional string $text-color: #ffffff
+optional string $sub-title: Join the newsletter to receive the latest updates in your inbox.
+string $background-color: #000c2d
+padding-vertical: 30
+padding-horizontal: 24
+border-radius: 4
+background-color: $background-color
+
+--- ftd.text: $title
+color:  #ffffff
+size: 28
+style: bold
+line-height: 40
+padding-bottom: 12
+
+--- ftd.text: $title
+color:  #ffffff
+size: 16
+line-height: 24
+padding-bottom: 24
+
+--- ftd.text: Subscribe
+color:  #ffffff
+size: 14
+padding-vertical: 10
+width: fill
+background-color: #f35266
+border-radius: 3
+text-align: center
+
+
+-- component social-media:
+component: ftd.column
+optional string $twitter:
+optional string $facebook:
+optional string $youtube:
+optional string $instagram:
+width: fill
+background-color: #fff
+border-radius: 6
+padding-vertical: 20
+border-color: #eaecee
+border-width: 1
+
+--- ftd.row:
+align: center
+spacing: 20
+
+--- ftd.image:
+if: $twitter is not null
+src: https://res.cloudinary.com/dphj6havg/image/upload/v1638288389/twitter_owarko.png
+width: 24
+height: auto
+link: $twitter
+
+--- ftd.image:
+if: $facebook is not null
+src: https://res.cloudinary.com/dphj6havg/image/upload/v1638288389/facebook-app-symbol_inagpd.png
+width: 24
+height: auto
+link: $facebook
+
+--- ftd.image:
+if: $youtube is not null
+src: https://res.cloudinary.com/dphj6havg/image/upload/v1638288389/youtube_jy7yzc.png
+width: 24
+height: auto
+link: $youtube
+
+--- ftd.image:
+if: $instagram is not null
+src: https://res.cloudinary.com/dphj6havg/image/upload/v1638288389/instagram_cxakmn.png
+width: 24
+height: auto
+link: $instagram
+
+
+
+
+-- component featured-post:
+component: ftd.row
+caption $title:
+string $date:
+string $image:
+padding-vertical: 30
+padding-horizontal: 24
+border-radius: 6
+border-color: #eaecee
+border-width: 1
+background-color: #fff
+spacing: 10
+
+--- ftd.column:
+width: percent 75
+spacing: 10
+
+
+--- ftd.text: $title
+size: 18
+line-height: 26
+style: bold
+
+--- ftd.text: $date
+size: 14
+color: #000c2d
+
+--- container: ftd.main
+
+--- ftd.column:
+width: percent 25
+
+--- ftd.image:
+src: $image
+width: fill
+height: auto
+
+
+-- component footer:
+component: ftd.column
+caption $title:
+body $description:
+optional string $label: Navigation
+toc list $links:
+optional string $copyright:
+optional integer $padding-horizontal: 130
+optional integer $padding-vertical: 19
+background-color: #fff
+padding-horizontal: $padding-horizontal
+padding-vertical : $padding-vertical
+width: fill
+
+--- ftd.row:
+padding-vertical: 20
+border-color: #eaecee
+border-bottom: 1
+width: fill
+id: footer-links
+spacing: 50
+
+--- ftd.column:
+width: percent 30
+align: left
+
+--- ftd.text: $title
+padding-bottom: 10
+size: 16
+
+--- ftd.text:
+text:  $description
+padding-bottom: 20
+size: 14
+
+--- container: footer-links
+
+--- ftd.column:
+width: percent 70
+align: top-left
+spacing: 14
+
+--- ftd.text: Navigation
+padding-bottom: 10
+size: 16
+
+--- header-link:
+$loop$: $links as $obj
+toc: $obj
+
+--- container: ftd.main
+
+--- ftd.text:
+if: $copyright is not null
+text: $copyright
+size: 13
+padding-vertical: 20
+text-align: center
+width: fill
+
+
+-- component blog-card:
+component: ftd.column
+string $image:
+caption $title:
+string $sub-title:
+string $link:
+string $date:
+width: fill
+border-radius: 4
+border-color: #eaecee
+border-width: 1
+link: $link
+background-color: white
+overflow-x: hidden
+overflow-y: hidden
+
+
+--- ftd.image:
+src: $image
+width: fill
+
+--- ftd.column:
+padding-vertical: 30
+padding-horizontal: 20
+
+--- ftd.text: $title
+size: 32
+line-height: 44
+color: #000c2d
+
+--- ftd.text: $sub-title
+size: 16
+line-height: 24
+padding-vertical: 16
+border-color: #eaecee
+border-bottom: 1
+color: #000c2d
+
+--- ftd.text: $date
+size: 14
+padding-top: 16
+line-height: 24
+color: #000c2d
+
+
+
+
+
+

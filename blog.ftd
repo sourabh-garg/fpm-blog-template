@@ -1,0 +1,183 @@
+-- import: lib
+
+-- lib.toc list $toc:
+
+-- $toc: Lorem ipsum
+link: /
+
+-- $toc: Lorem ipsum
+link: /
+
+-- lib.toc list $toc-second:
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- $toc-second: Lorem ipsum
+link:/
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- $toc-second: Lorem ipsum
+link: /
+
+-- ftd.column:
+width: fill
+id: main
+background-color: #f5f7f9
+
+-- ftd.column:
+width: fill
+shadow-offset-x: 0
+shadow-offset-y: 4
+shadow-size: 0
+shadow-blur: 12
+shadow-color: rgba (0, 0, 0, 0.05)
+
+-- lib.header:
+title: FPM Blog
+toc: $toc
+padding-vertical: 19
+padding-horizontal: 130
+
+-- lib.links-list:
+toc: $toc-second
+padding-vertical: 19
+padding-horizontal: 130
+
+-- container: main
+
+-- ftd.row:
+width: fill
+spacing: 50
+id: content
+padding-vertical: 40
+padding-horizontal: 130
+
+-- ftd.column:
+width: percent 70
+spacing: 20
+
+-- ftd.image:
+src: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
+width: fill
+height: auto
+
+-- lib.h0: Announcing FPM Launch
+
+-- lib.sub-heading: Your web pages creating experience is about to get even better.
+
+ftd is a language to create web pages or documents for publishing on the web. It starts
+with Markdown, but adds features to create full page layouts, lets you create reusable
+“ftd components”, and has first class support for data modelling, so the ftd document
+can be used as an data exchange format as well (as a replacement of JSON/CSV etc).
+
+fpm is “ftd package manager”, defines a package format for packaging ftd files.
+fpm packages can depend on other fpm packages, and fpm can install all the
+dependencies of a package.
+
+fpm can also convert ftd files to static HTML files, so you can publish
+FTD files on github pages, S3 etc static site hosting sites.
+
+-- lib.h2: fpm-repo
+
+fpm packages can be shared with others by using .tar.gz format defined by fpm or
+via Git repository (any version control system for that matter). fpm is capable
+of downloading package dependencies for packages that are hosted on version
+control systems or tarballs served over HTTP.
+
+fpm has a sister project, fpm-repo (under development), which can be used
+for first class package hosting. You can chose if your fpm package would be
+natively hosted on say Github or via a fpm-repo you have created or available as SAAS.
+
+-- lib.h3: fpm future
+
+fpm packages can be shared with others by using .tar.gz format defined by fpm or
+via Git repository (any version control system for that matter). fpm is capable
+of downloading package dependencies for packages that are hosted on version
+control systems or tarballs served over HTTP.
+
+fpm has a sister project, fpm-repo (under development), which can be used
+for first class package hosting. You can chose if your fpm package would be
+natively hosted on say Github or via a fpm-repo you have created or available as SAAS.
+
+-- container: content
+
+-- ftd.column:
+width: percent 30
+align: top
+spacing: 30
+
+-- lib.subscribe-block: FPM Blog - Latest FPM News & Updates Newsletter
+
+-- lib.social-media:
+youtube: /
+twitter: /
+facebook: /
+instagram: /
+
+-- ftd.column:
+width: fill
+spacing: 20
+
+-- ftd.text: FEATURED POSTS
+size: 14
+padding-bottom: 12
+width: fill
+border-color: #eaecee
+border-bottom: 1
+
+-- ftd.column:
+spacing: 20
+align: top
+width: fill
+
+-- lib.featured-post: How to start your first blog
+date: 04 Oct 2021
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1611399697/sample.jpg
+
+-- lib.featured-post: How to start your first blog
+date: 04 Oct 2021
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1611399697/sample.jpg
+
+-- lib.featured-post: How to start your first blog
+date: 04 Oct 2021
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1611399697/sample.jpg
+
+
+-- container: main
+
+-- lib.footer: FPM BLOG - LATEST FPM NEWS & UPDATES
+padding-vertical: 19
+padding-horizontal: 130
+copyright: © 2021 FPM Blog - Latest FPM News & Updates - Published with Ghost & Krabi
+links: $toc
+
+fpm is “ftd package manager”, defines a package format for packaging ftd files.
+fpm packages can depend on other fpm packages, and fpm can install all the
+dependencies of a package.
