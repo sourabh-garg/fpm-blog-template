@@ -1,55 +1,27 @@
 -- import: lib
 
--- lib.toc list $toc:
+-- lib.toc list toc:
 
--- $toc: Lorem ipsum
+
+-- lib.toc list toc-second:
+
+-- toc-second: HOME
 link: /
 
--- $toc: Lorem ipsum
-link: /
-
--- lib.toc list $toc-second:
-
--- $toc-second: Lorem ipsum
-link: /
-
--- $toc-second: Lorem ipsum
+-- toc-second: NEW FEATURES
 link:/
 
--- $toc-second: Lorem ipsum
+-- toc-second: HACKATHON
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: NEWS
 link: /
 
--- $toc-second: Lorem ipsum
-link: /
-
--- $toc-second: Lorem ipsum
-link: /
-
--- $toc-second: Lorem ipsum
-link: /
-
--- $toc-second: Lorem ipsum
-link: /
-
--- $toc-second: Lorem ipsum
-link: /
-
--- $toc-second: Lorem ipsum
-link: /
-
--- $toc-second: Lorem ipsum
-link: /
-
--- $toc-second: Lorem ipsum
-link: /
 
 -- ftd.column:
 width: fill
 id: main
-background-color: #f5f7f9
+background-color: #000
 
 -- ftd.column:
 width: fill
@@ -83,78 +55,99 @@ padding-horizontal: 130
 width: percent 70
 spacing: 20
 
--- lib.blog-card: Announcing FPM Launch
+-- lib.blog-card: \$6.7M in Series A funding to build the next-gen developer blogging community
 image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
-sub-title: Your web pages creating experience is about to get even better.
-date: 04 Oct 2021
+author: Lucian sienfeld
 link: /
 
--- lib.blog-card: Announcing FPM Launch
-image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
-sub-title: Your web pages creating experience is about to get even better.
-date: 04 Oct 2021
-link: /
+Today we announced that we have raised $6.7M in our Series A
+funding from some of the best VCs (Salesforce Ventures, Accel Partners, Sierra Ventures,
+Sequoia Capital's Surge), and notable individual investors like Vercel's Guillermo Rauch, AngelList'...
 
--- lib.blog-card: Announcing FPM Launch
-image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
-sub-title: Your web pages creating experience is about to get even better.
-date: 04 Oct 2021
-link: /
 
--- lib.blog-card: Announcing FPM Launch
-image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
-sub-title: Your web pages creating experience is about to get even better.
-date: 04 Oct 2021
-link: /
 
--- lib.blog-card: Announcing FPM Launch
-image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
-sub-title: Your web pages creating experience is about to get even better.
-date: 04 Oct 2021
-link: /
 
 -- container: content
 
 -- ftd.column:
 width: percent 30
 align: top
+spacing: 20
+
+
+-- lib.blog-card-preview: \$6.7M in Series A funding to build the next-gen developer blogging community
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
+author: Lucian sienfeld
+link: /
+
+-- lib.blog-card-preview: \$6.7M in Series A funding to build the next-gen developer blogging community
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
+author: Lucian sienfeld
+link: /
+
+
+-- container: main
+
+-- lib.banner:
+
+Hashnode Townhall is the official blog of Hashnode. Read product updates, announcements,
+interviews, and more in this blog. Get started with Hashnode now.
+
+-- container: main
+
+-- ftd.column:
+width: fill
 spacing: 30
+id: blogs
+background-color: #18191a
+padding-vertical: 60
+padding-horizontal: 130
 
--- lib.subscribe-block: FPM Blog - Latest FPM News & Updates Newsletter
-
--- lib.social-media:
-youtube: /
-twitter: /
-facebook: /
-instagram: /
-
--- ftd.column:
+-- ftd.row:
 width: fill
-spacing: 20
+spacing: 40
 
--- ftd.text: FEATURED POSTS
-size: 14
-padding-bottom: 12
+-- lib.blog-card-preview: \$6.7M in Series A funding to build the next-gen developer blogging community
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
+author: Lucian sienfeld
+link: /
+width: percent 33
+
+-- lib.blog-card-preview: \$6.7M in Series A funding to build the next-gen developer blogging community
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
+author: Lucian sienfeld
+link: /
+width: percent 33
+
+-- lib.blog-card-preview: \$6.7M in Series A funding to build the next-gen developer blogging community
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
+author: Lucian sienfeld
+link: /
+width: percent 33
+
+-- container: blogs
+
+-- ftd.row:
 width: fill
-border-color: #eaecee
-border-bottom: 1
+spacing: 40
 
--- ftd.column:
-spacing: 20
-align: top
-width: fill
+-- lib.blog-card-preview: \$6.7M in Series A funding to build the next-gen developer blogging community
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
+author: Lucian sienfeld
+link: /
+width: percent 33
 
--- lib.featured-post: How to start your first blog
-date: 04 Oct 2021
-image: https://res.cloudinary.com/dphj6havg/image/upload/v1611399697/sample.jpg
+-- lib.blog-card-preview: \$6.7M in Series A funding to build the next-gen developer blogging community
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
+author: Lucian sienfeld
+link: /
+width: percent 33
 
--- lib.featured-post: How to start your first blog
-date: 04 Oct 2021
-image: https://res.cloudinary.com/dphj6havg/image/upload/v1611399697/sample.jpg
-
--- lib.featured-post: How to start your first blog
-date: 04 Oct 2021
-image: https://res.cloudinary.com/dphj6havg/image/upload/v1611399697/sample.jpg
+-- lib.blog-card-preview: \$6.7M in Series A funding to build the next-gen developer blogging community
+image: https://res.cloudinary.com/dphj6havg/image/upload/v1638274747/Group_546_uvyd8z.jpg
+author: Lucian sienfeld
+link: /
+width: percent 33
 
 
 -- container: main

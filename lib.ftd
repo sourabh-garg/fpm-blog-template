@@ -1,48 +1,44 @@
--- $main: #fff
--- $primary: #F79489
--- $primary-500: #F8AFA6
--- $primary-300: #FADCD9
--- $primary-100: #F9F1F0
--- $accent: #0D1F2D
--- $error: c
--- $informational: c
--- $warning: c
--- $success: c
--- $secondary-100: c
--- $secondary-300: c
--- $secondary-400: c
--- $secondary-500: c
--- $secondary-700: c
--- $secondary-700: #4C555A
--- $secondary-900: #384248
--- $separator: #eee
+-- string main: #fff
+-- string primary: #F79489
+-- string primary-500: #F8AFA6
+-- string primary-300: #FADCD9
+-- string primary-100: #F9F1F0
+-- string accent: #0D1F2D
+-- string error: c
+-- string informational: c
+-- string warning: c
+-- string success: c
+-- string secondary-100: c
+-- string secondary-300: c
+-- string secondary-400: c
+-- string secondary-500: c
+-- string secondary-700: c
+-- string secondary-700: #4C555A
+-- string secondary-900: #384248
+-- string separator: #eee
 
 -- record toc:
 caption title:
 string link:
 
 
--- component header-link:
-component: ftd.text
-toc $toc:
+-- ftd.text header-link:
+toc toc:
 size: 14
-color: black
+color: white
 text: $toc.title
 link:  $toc.link
 min-width: fit-content
 
 
--- component header:
-component: ftd.row
-string $title:
-integer $padding-horizontal:
-integer $padding-vertical:
-optional string $link: \
-toc list $toc:
+--  ftd.row header:
+string title:
+integer padding-horizontal:
+integer padding-vertical:
+optional string link: \
+toc list toc:
 width: fill
-background-color: white
-border-color: #eaecee
-border-bottom: 1
+
 
 
 --- ftd.row:
@@ -51,8 +47,8 @@ padding-horizontal: $padding-horizontal
 padding-vertical: $padding-vertical
 
 --- ftd.text: $title
-size: 22
-color: black
+size: 30
+color: white
 link: $link
 padding-right: 50
 
@@ -65,15 +61,15 @@ $loop$: $toc as $obj
 toc: $obj
 
 
--- component links-list:
-component: ftd.row
-toc list $toc:
-integer $padding-horizontal:
-integer $padding-vertical:
+-- ftd.row links-list:
+toc list toc:
+integer padding-horizontal:
+integer padding-vertical:
 width: fill
-background-color: white
 overflow-x: hidden
 padding-horizontal: $padding-horizontal
+border-color: #4c4c4c
+border-bottom: 1
 
 --- ftd.row:
 width: fill
@@ -87,37 +83,34 @@ $loop$: $toc as $obj
 toc: $obj
 
 
--- component markdown:
-component: ftd.text
-body $body:
-optional boolean $collapsed:
-optional caption $title:
-optional boolean $two_columns:
-text: $body
+-- ftd.text markdown:
+body body:
+optional boolean collapsed:
+optional caption title:
+optional boolean two_columns:
+text: body
 size: 15
 line-height: 24
 color: $secondary-700
 padding-bottom: 8
 
 
--- component inner-markdown:
-component: ftd.text
-body $body:
-optional boolean $collapsed:
-optional caption $title:
-optional boolean $two_columns:
-string $color: #4C555A
+-- ftd.text inner-markdown:
+body body:
+optional boolean collapsed:
+optional caption title:
+optional boolean two_columns:
+string color: #4C555A
 text: $body
 size: 18
 line-height: 24
 color: $color
 
 
--- component h0:
-component: ftd.column
-caption $title:
-optional body $body:
-string $color: #000c2d
+-- ftd.column h0:
+caption title:
+optional body body:
+string color: #000c2d
 width: fill
 region: h0
 padding-bottom: 6
@@ -138,11 +131,10 @@ width: fill
 if: $body is not null
 body: $body
 
--- component h1:
-component: ftd.column
-caption $title:
-optional body $body:
-string $color: #000c2d
+-- ftd.column h1:
+caption title:
+optional body body:
+string color: #000c2d
 width: fill
 region: h1
 padding-bottom: 6
@@ -163,11 +155,10 @@ padding-top: 16
 if: $body is not null
 body: $body
 
--- component h2:
-component: ftd.column
-caption $title:
-optional body $body:
-string $color: #000c2d
+-- ftd.column h2:
+caption title:
+optional body body:
+string color: #000c2d
 width: fill
 region: h1
 padding-bottom: 6
@@ -188,11 +179,10 @@ padding-top: 16
 if: $body is not null
 body: $body
 
--- component h3:
-component: ftd.column
-caption $title:
-optional body $body:
-string $color: #000c2d
+-- ftd.column h3:
+caption title:
+optional body body:
+string color: #000c2d
 width: fill
 region: h1
 padding-bottom: 6
@@ -213,11 +203,10 @@ padding-top: 16
 if: $body is not null
 body: $body
 
--- component h4:
-component: ftd.column
-caption $title:
-optional body $body:
-string $color: #000c2d
+-- ftd.column h4:
+caption title:
+optional body body:
+string color: #000c2d
 width: fill
 region: h1
 padding-bottom: 6
@@ -242,20 +231,15 @@ body: $body
 if: $body is not null
 body: $body
 
--- component sub-heading:
-component: ftd.column
-caption $title:
-optional body $body:
-string $color: #4C555A
+-- ftd.column sub-heading:
+caption title:
+optional body body:
+string color: #4C555A
 width: fill
 region: h2
 padding-bottom: 6
 
---- ftd.text:
-text: $title
-caption $title:
-region: title
-text: $title
+--- ftd.text: $title
 size: 24
 line-height: 24
 color: $color
@@ -268,13 +252,12 @@ if: $body is not null
 body: $body
 
 
--- component subscribe-block:
-component: ftd.column
+-- ftd.column  subscribe-block:
 width: fill
-caption $title:
-optional string $text-color: #ffffff
-optional string $sub-title: Join the newsletter to receive the latest updates in your inbox.
-string $background-color: #000c2d
+caption title:
+optional string text-color: #ffffff
+optional string sub-title: Join the newsletter to receive the latest updates in your inbox.
+string background-color: #000c2d
 padding-vertical: 30
 padding-horizontal: 24
 border-radius: 4
@@ -303,12 +286,11 @@ border-radius: 3
 text-align: center
 
 
--- component social-media:
-component: ftd.column
-optional string $twitter:
-optional string $facebook:
-optional string $youtube:
-optional string $instagram:
+-- ftd.column social-media:
+optional string twitter:
+optional string facebook:
+optional string youtube:
+optional string instagram:
 width: fill
 background-color: #fff
 border-radius: 6
@@ -351,11 +333,10 @@ link: $instagram
 
 
 
--- component featured-post:
-component: ftd.row
-caption $title:
-string $date:
-string $image:
+-- ftd.row featured-post:
+caption title:
+string date:
+string image:
 padding-vertical: 30
 padding-horizontal: 24
 border-radius: 6
@@ -389,24 +370,114 @@ width: fill
 height: auto
 
 
--- component footer:
-component: ftd.column
-caption $title:
-body $description:
-optional string $label: Navigation
-toc list $links:
-optional string $copyright:
-optional integer $padding-horizontal: 130
-optional integer $padding-vertical: 19
-background-color: #fff
+
+
+
+--  ftd.column blog-card:
+string image:
+caption title:
+body sub-title:
+string link:
+string author:
+width: fill
+link: $link
+
+
+--- ftd.image:
+src: $image
+width: fill
+border-radius: 4
+
+--- ftd.column:
+padding-vertical: 30
+padding-horizontal: 15
+
+--- ftd.text: $title
+size: 36
+line-height: 44
+color: white
+
+--- ftd.text: $sub-title
+size: 17
+line-height: 24
+padding-vertical: 8
+color: #dddddd
+
+--- ftd.text: $author
+size: 14
+line-height: 24
+color: #dddddd
+
+
+
+
+
+--  ftd.column blog-card-preview:
+string image:
+caption title:
+string link:
+string author:
+optional string width: fill
+width: $width
+link: $link
+
+
+--- ftd.image:
+src: $image
+width: fill
+border-radius: 4
+
+--- ftd.column:
+padding-vertical: 20
+padding-horizontal: 15
+
+--- ftd.text: $title
+size: 20
+line-height: 26
+color: white
+
+--- ftd.text: $author
+size: 14
+line-height: 24
+color: #dddddd
+padding-top: 6
+
+-- ftd.column banner:
+body body:
+optional string background-color: #18191a
+optional integer padding-horizontal: 150
+optional integer padding-vertical: 50
+background-color: #18191a
+padding-horizontal: 200
+padding-vertical: 50
+border-color: #4c4c4c
+border-bottom: 1
+
+
+--- ftd.text:
+text: $body
+width: fill
+text-align: center
+size: 20
+line-height: 30
+color: white
+
+
+-- ftd.column footer:
+caption title:
+body description:
+optional string label: Navigation
+toc list links:
+optional string copyright:
+optional integer padding-horizontal: 130
+optional integer padding-vertical: 19
+background-color: #333333
 padding-horizontal: $padding-horizontal
 padding-vertical : $padding-vertical
 width: fill
 
 --- ftd.row:
 padding-vertical: 20
-border-color: #eaecee
-border-bottom: 1
 width: fill
 id: footer-links
 spacing: 50
@@ -418,11 +489,13 @@ align: left
 --- ftd.text: $title
 padding-bottom: 10
 size: 16
+color: white
 
 --- ftd.text:
 text:  $description
 padding-bottom: 20
 size: 14
+color: white
 
 --- container: footer-links
 
@@ -434,6 +507,7 @@ spacing: 14
 --- ftd.text: Navigation
 padding-bottom: 10
 size: 16
+color: white
 
 --- header-link:
 $loop$: $links as $obj
@@ -448,54 +522,4 @@ size: 13
 padding-vertical: 20
 text-align: center
 width: fill
-
-
--- component blog-card:
-component: ftd.column
-string $image:
-caption $title:
-string $sub-title:
-string $link:
-string $date:
-width: fill
-border-radius: 4
-border-color: #eaecee
-border-width: 1
-link: $link
-background-color: white
-overflow-x: hidden
-overflow-y: hidden
-
-
---- ftd.image:
-src: $image
-width: fill
-
---- ftd.column:
-padding-vertical: 30
-padding-horizontal: 20
-
---- ftd.text: $title
-size: 32
-line-height: 44
-color: #000c2d
-
---- ftd.text: $sub-title
-size: 16
-line-height: 24
-padding-vertical: 16
-border-color: #eaecee
-border-bottom: 1
-color: #000c2d
-
---- ftd.text: $date
-size: 14
-padding-top: 16
-line-height: 24
-color: #000c2d
-
-
-
-
-
-
+color: white

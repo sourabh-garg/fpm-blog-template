@@ -1,50 +1,51 @@
 -- import: lib
 
--- lib.toc list $toc:
+-- lib.toc list toc:
 
--- $toc: Lorem ipsum
+-- toc: Lorem ipsum
 link: /
 
--- $toc: Lorem ipsum
+-- toc: Lorem ipsum
 link: /
 
--- lib.toc list $toc-second:
+-- lib.toc list toc-second:
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link:/
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
 
--- $toc-second: Lorem ipsum
+-- toc-second: Lorem ipsum
 link: /
+
 
 -- ftd.column:
 width: fill
